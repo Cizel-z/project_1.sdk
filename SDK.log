@@ -1049,3 +1049,139 @@ con
 ----------------End of Script----------------
 
 22:44:26 INFO  : Launch script is exported to file 'D:\PM\VIBADO\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_uart_ini.elf_on_local.tcl'
+23:14:11 INFO  : Disconnected from the channel tcfchan#3.
+23:14:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+23:14:12 INFO  : 'fpga -state' command is executed.
+23:14:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:14:13 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+23:14:13 INFO  : 'jtag frequency' command is executed.
+23:14:13 INFO  : Sourcing of 'D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:14:13 INFO  : Context for 'APU' is selected.
+23:14:14 INFO  : Hardware design information is loaded from 'D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:14:14 INFO  : 'configparams force-mem-access 1' command is executed.
+23:14:14 INFO  : Context for 'APU' is selected.
+23:14:15 INFO  : 'stop' command is executed.
+23:14:15 INFO  : 'ps7_init' command is executed.
+23:14:15 INFO  : 'ps7_post_config' command is executed.
+23:14:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:14:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:14:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:14:15 INFO  : The application 'D:/PM/VIBADO/project_1/project_1.sdk/uart_ini/Debug/uart_ini.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:14:15 INFO  : 'configparams force-mem-access 0' command is executed.
+23:14:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow D:/PM/VIBADO/project_1/project_1.sdk/uart_ini/Debug/uart_ini.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:14:15 INFO  : Memory regions updated for context APU
+23:14:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:14:15 INFO  : 'con' command is executed.
+23:14:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+23:14:15 INFO  : Launch script is exported to file 'D:\PM\VIBADO\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_uart_ini.elf_on_local.tcl'
+23:15:14 INFO  : Disconnected from the channel tcfchan#4.
+23:15:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+23:15:15 INFO  : 'fpga -state' command is executed.
+23:15:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:15:17 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+23:15:17 INFO  : 'jtag frequency' command is executed.
+23:15:17 INFO  : Sourcing of 'D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:15:17 INFO  : Context for 'APU' is selected.
+23:15:18 INFO  : Hardware design information is loaded from 'D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:15:18 INFO  : 'configparams force-mem-access 1' command is executed.
+23:15:18 INFO  : Context for 'APU' is selected.
+23:15:18 INFO  : 'stop' command is executed.
+23:15:18 INFO  : 'ps7_init' command is executed.
+23:15:18 INFO  : 'ps7_post_config' command is executed.
+23:15:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:15:18 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:15:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:15:18 INFO  : The application 'D:/PM/VIBADO/project_1/project_1.sdk/uart_ini/Debug/uart_ini.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:15:18 INFO  : 'configparams force-mem-access 0' command is executed.
+23:15:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow D:/PM/VIBADO/project_1/project_1.sdk/uart_ini/Debug/uart_ini.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:15:18 INFO  : Memory regions updated for context APU
+23:15:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:15:19 INFO  : 'con' command is executed.
+23:15:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+23:15:19 INFO  : Launch script is exported to file 'D:\PM\VIBADO\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_uart_ini.elf_on_local.tcl'
+23:15:42 INFO  : Disconnected from the channel tcfchan#5.
+23:15:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+23:15:43 INFO  : 'fpga -state' command is executed.
+23:15:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:15:43 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+23:15:43 INFO  : 'jtag frequency' command is executed.
+23:15:43 INFO  : Sourcing of 'D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:15:43 INFO  : Context for 'APU' is selected.
+23:15:44 INFO  : Hardware design information is loaded from 'D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:15:44 INFO  : 'configparams force-mem-access 1' command is executed.
+23:15:44 INFO  : Context for 'APU' is selected.
+23:15:44 INFO  : 'stop' command is executed.
+23:15:44 INFO  : 'ps7_init' command is executed.
+23:15:44 INFO  : 'ps7_post_config' command is executed.
+23:15:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:15:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:15:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:15:45 INFO  : The application 'D:/PM/VIBADO/project_1/project_1.sdk/uart_ini/Debug/uart_ini.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:15:45 INFO  : 'configparams force-mem-access 0' command is executed.
+23:15:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw D:/PM/VIBADO/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow D:/PM/VIBADO/project_1/project_1.sdk/uart_ini/Debug/uart_ini.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:15:45 INFO  : Memory regions updated for context APU
+23:15:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:15:45 INFO  : 'con' command is executed.
+23:15:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+23:15:45 INFO  : Launch script is exported to file 'D:\PM\VIBADO\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_uart_ini.elf_on_local.tcl'
+23:16:06 INFO  : Disconnected from the channel tcfchan#6.

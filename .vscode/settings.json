@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "xstatus.h": "c",
+        "platform_config.h": "c",
+        "xil_cache.h": "c",
+        "xparameters.h": "c",
+        "uart.h": "c",
+        "xil_printf.h": "c"
+    }
+}

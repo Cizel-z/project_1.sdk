@@ -47,12 +47,17 @@
 
 #include <stdio.h>
 #include "platform.h"
+#include "uart.h"
 #include "xil_printf.h"
-
+#include "sleep.h"
 
 int main()
 {
-    init_platform();
+    // init_platform();
+    uart_init();
+    {
+        printf("hello word\n");
+    }
 
     print("Hello World\n\r");
 
